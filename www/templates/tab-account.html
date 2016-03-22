@@ -1,0 +1,23 @@
+<ion-view view-title="Nutrition log">
+  <ion-content>
+   <div class="list">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="What did you have?" ng-model="item">
+        </label>
+        <input type="submit" ng-click="findFood(item)" value="Search" class="button button-small" />
+      </div>
+      <div class="list" ng-repeat="item in items" ng-click="goToDetailPage(item)">
+
+        <div class="card">
+          <div class="item item-text-wrap">
+            <p>{{item.fields.item_name}}, {{item.fields.nf_calories}} calories</p>
+          </div>
+      </div> -->
+    </div>
+
+  </ion-content>
+</ion-view>
+
+
+  
