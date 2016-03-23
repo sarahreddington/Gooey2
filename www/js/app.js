@@ -61,16 +61,6 @@ angular.module('gooeyApp', ['ionic' ,'gooeyApp.controllers', 'gooeyApp.directive
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
-
   .state('tab.account', {
     url: '/account',
     views: {
@@ -79,7 +69,16 @@ angular.module('gooeyApp', ['ionic' ,'gooeyApp.controllers', 'gooeyApp.directive
         controller: 'AccountCtrl'
       }
     }
-  });
+  })
+   .state('tab.summary', {
+      url: '/summary',
+      views: {
+        'tab-summary': {
+          templateUrl: 'templates/tab-summary.html',
+          controller: 'SummaryCtrl'
+        }
+      }
+    });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
